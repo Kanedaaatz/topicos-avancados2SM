@@ -4,7 +4,7 @@ function validarChamado(titulo: string): boolean {
     }
 
     // Regra: mínimo de 5 caracteres
-    if (titulo.length <= 5) {
+    if (titulo.length < 5) {
         throw new Error("O título do chamado deve possuir no mínimo 5 caracteres.");
     }
 
