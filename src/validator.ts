@@ -3,10 +3,8 @@ function validarChamado(titulo: string): boolean {
         throw new Error("O título do chamado não pode ser vazio.");
     }
 
-    return true;
-
     // Regra: mínimo de 5 caracteres
-    if (titulo.length < 5) {
+    if (titulo.length <= 5) {
         throw new Error("O título do chamado deve possuir no mínimo 5 caracteres.");
     }
 
@@ -14,6 +12,8 @@ function validarChamado(titulo: string): boolean {
     if (titulo.length > 100) {
         throw new Error("O título do chamado deve possuir no máximo 100 caracteres.");
     }
+
+    return true;
     
 
 
